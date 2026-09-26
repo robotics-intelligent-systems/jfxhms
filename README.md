@@ -1,4 +1,4 @@
-# jfxhms --- OpenTwin AI Hospital & Healthcare Management Platform
+# OpenTwin Agentic AI Hospital & Healthcare Management Platform
 
 > Open, modular reference architecture for hospital information systems,
 > healthcare operations, emergency response, medical logistics,
