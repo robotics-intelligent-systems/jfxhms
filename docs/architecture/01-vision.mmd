@@ -1,0 +1,13 @@
+flowchart TB
+    Channels["Patient, community and emergency channels"] --> Platform["OpenTwin healthcare platform"]
+    Platform --> Clinical["Clinical services: HIS, EHR, laboratory"]
+    Platform --> Operations["Operations: ERP, inventory and logistics"]
+    Platform --> EMS["Emergency dispatch and medical fleet"]
+    Clinical --> Interop["Authorized FHIR and CQL adapters"]
+    Operations --> Twin["Operational asset twins"]
+    EMS --> Twin
+    Interop --> ClinicalData["Protected clinical repository"]
+    Twin --> AssetData["Asset state, events and provenance"]
+    ClinicalData -. "authorized inputs" .-> Support["Governed decision support and analytics"]
+    AssetData --> Support
+    Simulation["MBSE and simulation"] -. "models and evidence" .-> Twin

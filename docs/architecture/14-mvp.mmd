@@ -1,0 +1,7 @@
+flowchart LR
+    UI["Operator dashboard"] --> API["Authenticated core API"]
+    API --> Domains["Organizations, facilities, assets, inventory and EMS registry"]
+    Domains --> Twin["OpenTwin operational registry"]
+    Domains --> Store["PostgreSQL and event history"]
+    Twin --> Store
+    API --> Audit["Authorization and auditable operations"]

@@ -1,0 +1,23 @@
+{
+  "source_commit": "197f990838ea47ce6594336824ab9fde51ff61d5",
+  "sources": [
+    {
+      "path": "MBSE/CAD/large-medical-support-ship-concept.jpg",
+      "sha256": "91069dce3b424ea6f66975ee7a243adc515e712822b0c0b03ddac5dbf1dba11a",
+      "git_blob_sha": "c33c40ad0c579f08b6e4585bedb3497d6289ccbf",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxhms/blob/197f990838ea47ce6594336824ab9fde51ff61d5/MBSE/CAD/large-medical-support-ship-concept.jpg"
+    },
+    {
+      "path": "MBSE/CAD/medical-patrol-boat-concept.jpg",
+      "sha256": "3b91dbc63a26b812cb4e8cf158d447c788f80bf6eb756e05db7b1d6274dcc2e4",
+      "git_blob_sha": "ed9032052cc5166080b4d780f25ca6d34fa64205",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxhms/blob/197f990838ea47ce6594336824ab9fde51ff61d5/MBSE/CAD/medical-patrol-boat-concept.jpg"
+    },
+    {
+      "path": "MBSE/CAD/modular-medical-vessel-concept.jpg",
+      "sha256": "86f8d74b5491cf5b72dab9a5d1f5cb02488bafea03bfac3f9a13be5cb1753f27",
+      "git_blob_sha": "b68c671e6f186476468b7821fd2c944b63201410",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxhms/blob/197f990838ea47ce6594336824ab9fde51ff61d5/MBSE/CAD/modular-medical-vessel-concept.jpg"
+    }
+  ]
+}

@@ -24,34 +24,28 @@ treated as one mandatory runtime stack.
 **Design principle:** open, modular architecture designed to minimize
 proprietary lock-in and enable independent implementations.
 
+## CAD-aligned requirements baseline
+
+[Medical-fleet requirements and CAD traceability](docs/requirements/cad-concept-requirements.md) links the three illustrated marine concepts to four editable Drawio specifications: common requirements, medical patrol boat, modular medical vessel, and large medical support ship. Each proposed requirement has an ID, allocation, verification method and acceptance criterion. Dimensions, occupancy, power, operating envelopes and evidence remain pending; dashboard examples are not performance limits.
+
+The diagrams below describe a proposed architecture, not deployed services. Solid arrows indicate primary data or workflow relationships; dotted arrows indicate constrained feedback, supporting evidence or cross-cutting governance. Clinical records remain separately governed from ordinary asset telemetry.
+
 ## Vision
 
-``` text
-PATIENT / COMMUNITY / EMERGENCY CHANNELS
-                   |
-       OPENTWIN HEALTHCARE PLATFORM
-                   |
-      +------------+-------------+
-      |            |             |
-   Clinical     Hospital      Emergency
-   EHR/HIS      ERP/SCM       CAD/AVL
-   Lab/CQL      Inventory     Ambulance
-      |            |             |
-      +------------+-------------+
-                   |
-             OPENTWIN CORE
-       Twin Registry / State / Events
-       Provenance / Rules / Workflows
-                   |
-      +------------+-------------+
-      |            |             |
-    AI/CDS       FHIR/CQL      Analytics
-                   |
-         HEALTHCARE DATA PLATFORM
-      SQL / FHIR / Events / Audit
-                   |
-            MBSE / SIMULATION
-          Arcadia / Capella
+```mermaid
+flowchart TB
+    Channels["Patient, community and emergency channels"] --> Platform["OpenTwin healthcare platform"]
+    Platform --> Clinical["Clinical services: HIS, EHR, laboratory"]
+    Platform --> Operations["Operations: ERP, inventory and logistics"]
+    Platform --> EMS["Emergency dispatch and medical fleet"]
+    Clinical --> Interop["Authorized FHIR and CQL adapters"]
+    Operations --> Twin["Operational asset twins"]
+    EMS --> Twin
+    Interop --> ClinicalData["Protected clinical repository"]
+    Twin --> AssetData["Asset state, events and provenance"]
+    ClinicalData -. "authorized inputs" .-> Support["Governed decision support and analytics"]
+    AssetData --> Support
+    Simulation["MBSE and simulation"] -. "models and evidence" .-> Twin
 ```
 
 ## Objectives
@@ -72,27 +66,20 @@ PATIENT / COMMUNITY / EMERGENCY CHANNELS
 
 ## Reference Architecture
 
-``` text
-EXPERIENCE
-Patient | Clinician | Nurse | EMS | Administrator
-                         |
-HEALTHCARE SERVICES
-EHR | HIS | Lab | Pharmacy | Scheduling | Billing
-Emergency | Inventory | Supply Chain | Insurance
-                         |
-OPENTWIN CORE
-Twin Registry | State | Relationships | Events
-Provenance | Workflows | Rules | Simulation Links
-                         |
-INTEROPERABILITY & INTELLIGENCE
-FHIR | CQL | CDS | AI/ML | Analytics | Optimization
-                         |
-PHYSICAL / OPERATIONAL SYSTEMS
-Hospital | Labs | Ambulances | Medical Boats
-Hospital Ships | Air Medical | Warehouses | Devices
-                         |
-DATA
-SQL | FHIR Store | Events | Objects | Audit | GIS
+```mermaid
+flowchart TB
+    Experience["Patient, clinician, EMS and administrator interfaces"] --> API["Identity-aware APIs and domain services"]
+    API --> Clinical["Clinical workflows and FHIR adapters"]
+    API --> Ops["Hospital, supply-chain and EMS operations"]
+    Clinical --> Records["Clinical records and clinical audit"]
+    Ops --> Core["OpenTwin registry, workflows and asset events"]
+    Core --> Assets["Asset state, history and operational audit"]
+    Physical["Facilities, devices and medical fleet"] --> Adapters["Validated telemetry and system adapters"]
+    Adapters --> Core
+    Core -. "reviewed operational requests" .-> Adapters
+    Records -. "authorized and minimized data" .-> Intelligence["CQL, AI and analytics with human review"]
+    Assets --> Intelligence
+    Governance["Privacy, safety, access control, provenance and resilience"] -. "applies to all boundaries" .-> API
 ```
 
 Cross-cutting concerns: **Identity · Privacy · Cybersecurity · Patient
@@ -118,20 +105,15 @@ Candidate twins:
 -   Warehouse Twin
 -   Emergency Mission Twin
 
-``` text
-Physical / Operational Asset
-            |
- Sensors / HIS / EMS / ERP
-            |
-       Twin Adapter
-            |
-       OpenTwin Core
-            |
- Current State + History
-            |
- Rules / AI / Analytics
-            |
-     Decision Support
+```mermaid
+flowchart LR
+    Asset["Physical or operational asset"] --> Sources["Sensors and HIS, EMS or ERP sources"]
+    Sources --> Adapter["Versioned twin adapter"]
+    Adapter --> Core["OpenTwin registry and state history"]
+    Core --> Rules["Rules, models and analytics"]
+    Rules --> Review["Qualified human review"]
+    Review -. "approved operational action" .-> Asset
+    Core --> Audit["Configuration, quality and provenance"]
 ```
 
 Example:
@@ -158,18 +140,15 @@ ordinary equipment telemetry.
 
 ## Clinical Information and Interoperability
 
-``` text
-Clinical Application
-        |
-Healthcare API
-        |
-FHIR Adapter
-        |
-FHIR Repository
-        |
-Terminology / Rules / CQL
-        |
-Clinical Workflow
+```mermaid
+flowchart TB
+    App["Clinical application"] --> API["Authorized healthcare API"]
+    API --> Adapter["FHIR adapter: selected version and profiles"]
+    Adapter <--> Repo["Protected FHIR repository"]
+    Repo --> Rules["Terminology and versioned CQL rules"]
+    Rules --> Review["Qualified clinical review"]
+    Review --> Workflow["Clinical workflow and recorded decision"]
+    Workflow --> Adapter
 ```
 
 Candidate resources include patients, encounters, observations,
@@ -182,11 +161,15 @@ implementation guides, terminology bindings and conformance tests.
 
 ## Hospital Operations
 
-``` text
-Patient -> Registration -> Triage -> Encounter
-        -> Clinical Service
-        -> Lab / Imaging / Pharmacy
-        -> Treatment -> Discharge / Follow-up
+```mermaid
+flowchart TB
+    Patient["Patient"] --> Registration["Registration"]
+    Registration --> Triage["Qualified triage"]
+    Triage --> Encounter["Encounter and care coordination"]
+    Encounter --> Services["Selected clinical service"]
+    Services --> Diagnostics["Laboratory, imaging or pharmacy when indicated"]
+    Diagnostics --> Review["Clinician-reviewed results and care"]
+    Review --> Followup["Discharge, transfer or follow-up"]
 ```
 
 Administrative capabilities may include appointments, beds, departments,
@@ -195,20 +178,15 @@ maintenance, reporting and quality indicators.
 
 ## Emergency Medical Services
 
-``` text
-Emergency Request
-       |
-    CAD / Dispatch
-       |
- Resource Selection
-       |
-Ambulance / Boat / Air Asset
-       |
- GPS / AVL / Telemetry
-       |
- Patient Transport
-       |
- Hospital Handover
+```mermaid
+flowchart TB
+    Request["Emergency request"] --> Dispatch["Incident registration and qualified dispatch"]
+    Dispatch --> Selection["Resource and destination coordination"]
+    Selection --> Fleet["Road, marine or air-medical resource"]
+    Fleet --> Mission["Supervised response and transport"]
+    Mission --> Handover["Recorded hospital handover"]
+    Fleet -. "availability, location and status" .-> Dispatch
+    Handover --> History["Mission history and fleet readiness"]
 ```
 
 Candidate capabilities include incident registration, dispatch, unit
@@ -220,23 +198,20 @@ qualified human oversight.
 
 ## OpenTwin Medical Fleet
 
-``` text
-               OPENTWIN MEDICAL FLEET
-                        |
-       +----------------+----------------+
-       |                |                |
-    Road EMS        Marine EMS       Air Medical
-  Ambulances       Patrol Boats      Helicopter
- Mobile Clinics    Hospital Ships     Aircraft
-       |                |                |
-       +----------------+----------------+
-                        |
-                Mission Digital Twin
-                        |
-        Location / Status / Equipment
-          Energy / Crew / Maintenance
-                        |
-                Healthcare Platform
+```mermaid
+flowchart TB
+    Fleet["OpenTwin medical fleet"] --> Road["Road EMS: ambulances and mobile clinics"]
+    Fleet --> Marine["Marine medical assets"]
+    Fleet --> Air["Air-medical integration"]
+    Marine --> Patrol["Medical patrol boat: protected coastal and river mission"]
+    Marine --> Modular["Modular medical support vessel"]
+    Marine --> Ship["Large medical support ship"]
+    Road --> Mission["Mission twin: availability, crew, equipment and maintenance"]
+    Patrol --> Mission
+    Modular --> Mission
+    Ship --> Mission
+    Air --> Mission
+    Mission --> Platform["EMS and healthcare coordination"]
 ```
 
 The fleet model supports road ambulances/mobile clinics, marine medical
@@ -251,18 +226,14 @@ appointment optimization, supply forecasting, anomaly detection,
 clinical NLP research, coding assistance, risk stratification,
 medical-logistics optimization and predictive maintenance.
 
-``` text
-Healthcare Data
-      |
-Validated AI / Rules
-      |
-Recommendation
-      |
-Evidence + Provenance
-      |
-Qualified Human Review
-      |
-Approved Action
+```mermaid
+flowchart TB
+    Inputs["Authorized data with quality and provenance"] --> Model["Validated rules or versioned AI model"]
+    Model --> Recommendation["Recommendation with evidence and limitations"]
+    Recommendation --> Review{"Qualified human review"}
+    Review -->|"accepted"| Action["Authorized action in responsible workflow"]
+    Review -->|"rejected or revised"| Record["Recorded decision and feedback"]
+    Action --> Record
 ```
 
 AI output should expose model identity/version, timestamp, input
@@ -272,10 +243,14 @@ governance and regulatory processes required for the deployment.
 
 ## Laboratory and Diagnostics
 
-``` text
-Order -> Specimen -> Collection -> Laboratory Workflow
-      -> Analyzer / Manual Result -> Validation
-      -> Diagnostic Report -> Clinical Record
+```mermaid
+flowchart TB
+    Order["Authorized laboratory order"] --> Specimen["Specimen identity and collection"]
+    Specimen --> Lab["Accessioning and laboratory workflow"]
+    Lab --> Result["Analyzer or manual result"]
+    Result --> Validation{"Qualified result validation"}
+    Validation -->|"accepted"| Report["Diagnostic report and clinical record"]
+    Validation -->|"nonconforming"| Hold["Hold and review or repeat according to procedure"]
 ```
 
 Functions may include test catalogs, sample identification,
@@ -284,10 +259,16 @@ reporting and traceability.
 
 ## Healthcare ERP, Supply Chain and Financing
 
-``` text
-Clinical Demand -> Inventory -> Warehouse
-                -> Procurement -> Supplier
-                -> Receipt -> Hospital / EMS
+```mermaid
+flowchart TB
+    Demand["Approved clinical and mission demand"] --> Stock["Inventory, reservations and FEFO assessment"]
+    Stock --> Plan["Procurement and distribution planning"]
+    Plan --> Supplier["Approved supplier"]
+    Supplier --> Receipt["Receipt, lot and expiry checks"]
+    Receipt --> Warehouse["Warehouse and cold chain when required"]
+    Warehouse --> Delivery["Hospital, vessel or EMS supply"]
+    Delivery --> Stock
+    Finance["Replaceable billing, financing and insurance adapters"] -. "authorized transactions" .-> Plan
 ```
 
 Potential capabilities include procurement, inventory, medical supplies,
@@ -299,18 +280,16 @@ reimbursement should be isolated behind replaceable adapters.
 
 ## Data and Event Architecture
 
-``` text
-HIS / EHR / EMS / Lab / ERP / IoT
-               |
-           API Gateway
-               |
-          Domain Services
-               |
-        Event / Workflow Layer
-               |
- SQL / FHIR Store / Objects / Audit
-               |
-        Analytics / AI
+```mermaid
+flowchart TB
+    Sources["HIS, EHR, EMS, laboratory, ERP and IoT"] --> Gateway["Authenticated APIs and adapters"]
+    Gateway --> Services["Domain services and authorization"]
+    Services --> Events["Versioned event and workflow layer"]
+    Events --> Clinical["Protected clinical and FHIR records"]
+    Events --> Ops["Operational SQL, asset events and objects"]
+    Services --> Audit["Access and decision audit with provenance"]
+    Clinical -. "authorized minimized views" .-> Analytics["Governed analytics and AI"]
+    Ops --> Analytics
 ```
 
 Example events:
@@ -390,8 +369,13 @@ jurisdiction.
 
 The engineering approach preserves:
 
-``` text
-MBSE -> CAD -> CAM -> CAS
+```mermaid
+flowchart LR
+    MBSE["MBSE: needs, requirements and architecture"] --> CAD["CAD: vessel and medical-module arrangement"]
+    CAD --> CAM["CAM: production and integration plans"]
+    CAM --> CAS["CAS: naval, workflow and resilience simulation"]
+    CAS --> Verification["Verification evidence and design review"]
+    Verification -. "controlled revisions" .-> MBSE
 ```
 
 Arcadia/Capella can structure stakeholder needs, operational analysis,
@@ -404,31 +388,31 @@ inventory, energy resilience, evacuation and disaster response.
 
 ## Open-Source Technology Compendium
 
-  Domain                      Candidate / Reference   Potential Role
-  --------------------------- ----------------------- -------------------------------------
-  Healthcare AI               KARMA                   AI research/reference
-  Healthcare AI               TALENT                  Healthcare AI reference
-  Healthcare Platform         Marley Health           Healthcare software reference
-  ML / Healthcare             pyHealth                Healthcare ML research
-  Emergency                   MedRescue               Medical-response reference
-  HIS                         Open Hospital           Hospital information system
-  EMR                         Danphe EMR              EMR reference
-  Clinical Rules              CQL                     Clinical quality/rules language
-  Clinical Decision Support   Citrus                  CDS reference
-  Expert Systems              d3web                   Knowledge-based decision support
-  HIS/ERP                     OpenClinic GA           Hospital/clinic management
-  Health Financing            openIMIS                Health financing/insurance
-  FHIR                        HAPI FHIR               FHIR implementation framework
-  Laboratory                  OpenHMIS / iSkyLIMS     Laboratory references
-  Integration                 IPF                     Healthcare integration framework
-  CQL/FHIR                    Blaze                   Clinical interoperability reference
-  EMS                         CAD / AVL               Dispatch/location architecture
-  Supply Chain                OpenBoxes               Medical supply-chain reference
-  MBSE                        Capella / Arcadia       Systems engineering
-  Database                    PostgreSQL              Relational persistence
-  Containers                  Docker                  Reproducible deployment
-  Orchestration               Kubernetes              Scalable deployment
-  APIs                        OpenAPI / AsyncAPI      Interface contracts
+| Domain | Candidate / Reference | Potential role |
+| --- | --- | --- |
+| Healthcare AI | KARMA | AI research/reference |
+| Healthcare AI | TALENT | Healthcare AI reference |
+| Healthcare Platform | Marley Health | Healthcare software reference |
+| ML / Healthcare | pyHealth | Healthcare ML research |
+| Emergency | MedRescue | Medical-response reference |
+| HIS | Open Hospital | Hospital information system |
+| EMR | Danphe EMR | EMR reference |
+| Clinical Rules | CQL | Clinical quality/rules language |
+| Clinical Decision Support | Citrus | CDS reference |
+| Expert Systems | d3web | Knowledge-based decision support |
+| HIS/ERP | OpenClinic GA | Hospital/clinic management |
+| Health Financing | openIMIS | Health financing/insurance |
+| FHIR | HAPI FHIR | FHIR implementation framework |
+| Laboratory | OpenHMIS / iSkyLIMS | Laboratory references |
+| Integration | IPF | Healthcare integration framework |
+| CQL/FHIR | Blaze | Clinical interoperability reference |
+| EMS | CAD / AVL | Dispatch/location architecture |
+| Supply Chain | OpenBoxes | Medical supply-chain reference |
+| MBSE | Capella / Arcadia | Systems engineering |
+| Database | PostgreSQL | Relational persistence |
+| Containers | Docker | Reproducible deployment |
+| Orchestration | Kubernetes | Scalable deployment |
+| APIs | OpenAPI / AsyncAPI | Interface contracts |
 
 Inclusion does not imply endorsement, bundling, mandatory dependency,
 regulatory approval or current compatibility. Verify license, security,
@@ -464,16 +448,13 @@ not assume every referenced healthcare project must be installed.
 
 Minimal target:
 
-``` text
-Web Client
-    |
-Healthcare Core API
-    |
-PostgreSQL
-    |
-Facility / Operations Services
-    |
-OpenTwin Registry
+```mermaid
+flowchart LR
+    Client["Operator web client"] --> API["Identity-aware healthcare core API"]
+    API --> Services["Facility and operations services"]
+    Services --> Twin["OpenTwin registry and asset state"]
+    Services --> SQL["Operational PostgreSQL store"]
+    Twin --> SQL
 ```
 
 Extended deployments can add FHIR, event broker, object storage,
@@ -569,16 +550,14 @@ jfxhms/
 
 ## MVP
 
-``` text
-Operator Web UI
-      |
-Healthcare Core API
-      |
-Facility / Assets / EMS
-      |
- PostgreSQL
-      |
-OpenTwin Registry
+```mermaid
+flowchart LR
+    UI["Operator dashboard"] --> API["Authenticated core API"]
+    API --> Domains["Organizations, facilities, assets, inventory and EMS registry"]
+    Domains --> Twin["OpenTwin operational registry"]
+    Domains --> Store["PostgreSQL and event history"]
+    Twin --> Store
+    API --> Audit["Authorization and auditable operations"]
 ```
 
 MVP features:

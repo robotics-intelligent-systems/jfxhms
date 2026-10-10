@@ -1,0 +1,6 @@
+flowchart LR
+    Client["Operator web client"] --> API["Identity-aware healthcare core API"]
+    API --> Services["Facility and operations services"]
+    Services --> Twin["OpenTwin registry and asset state"]
+    Services --> SQL["Operational PostgreSQL store"]
+    Twin --> SQL

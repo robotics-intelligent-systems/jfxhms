@@ -1,0 +1,6 @@
+flowchart LR
+    MBSE["MBSE: needs, requirements and architecture"] --> CAD["CAD: vessel and medical-module arrangement"]
+    CAD --> CAM["CAM: production and integration plans"]
+    CAM --> CAS["CAS: naval, workflow and resilience simulation"]
+    CAS --> Verification["Verification evidence and design review"]
+    Verification -. "controlled revisions" .-> MBSE

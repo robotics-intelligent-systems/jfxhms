@@ -1,0 +1,7 @@
+flowchart TB
+    Inputs["Authorized data with quality and provenance"] --> Model["Validated rules or versioned AI model"]
+    Model --> Recommendation["Recommendation with evidence and limitations"]
+    Recommendation --> Review{"Qualified human review"}
+    Review -->|"accepted"| Action["Authorized action in responsible workflow"]
+    Review -->|"rejected or revised"| Record["Recorded decision and feedback"]
+    Action --> Record

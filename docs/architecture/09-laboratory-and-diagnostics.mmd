@@ -1,0 +1,7 @@
+flowchart TB
+    Order["Authorized laboratory order"] --> Specimen["Specimen identity and collection"]
+    Specimen --> Lab["Accessioning and laboratory workflow"]
+    Lab --> Result["Analyzer or manual result"]
+    Result --> Validation{"Qualified result validation"}
+    Validation -->|"accepted"| Report["Diagnostic report and clinical record"]
+    Validation -->|"nonconforming"| Hold["Hold and review or repeat according to procedure"]

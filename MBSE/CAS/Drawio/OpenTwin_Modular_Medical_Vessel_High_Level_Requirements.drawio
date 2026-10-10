@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="jfxhms CAD-aligned requirements" version="24.7.17" type="device">
+  <diagram id="MOD-1" name="01 — Scope and CAD baseline">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="OpenTwin — Modular Medical Vessel Requirements&lt;br&gt;&lt;b&gt;01 — Scope and CAD baseline&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=18;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="20" width="1540" height="78" />
+        </mxCell>
+        <mxCell id="footer" value="PROPOSED CONCEPT BASELINE • CAD illustration is not validated geometry • I: inspection · A: analysis · D: demonstration · T: test • Clinical/physical acceptance evidence pending" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#64748b;fontFamily=Helvetica;fontSize=12;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="940" width="1540" height="42" />
+        </mxCell>
+        <mxCell id="source" value="&lt;b&gt;CAD source&lt;/b&gt;&lt;br&gt;MBSE/CAD/modular-medical-vessel-concept.jpg&lt;br&gt;&lt;br&gt;Source revision and hashes: docs/requirements/cad-source-baseline.json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="scope" value="&lt;b&gt;Illustrated system boundary&lt;/b&gt;&lt;br&gt;Configurable medical vessel with medical modules, hybrid/PV, navigation, helipad and support boats. Service and handling capacities require configuration-specific design." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="status" value="&lt;b&gt;Baseline status&lt;/b&gt;&lt;br&gt;Proposed requirements. Named owner roles are recommendations; people, dates and quantitative budgets need assignment. No test completion, clinical capability or certification is claimed." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="roles" value="&lt;b&gt;Stakeholders / responsibility&lt;/b&gt;&lt;br&gt;Skipper, crew, clinical staff, patient/escort, EMS coordinator, maintainer, naval architect, clinical governance and data/privacy owners.&lt;br&gt;CONOPS: configure → inspect → dispatch/support → transfer/handover → recover/maintain." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="common" value="&lt;b&gt;Requirements allocation&lt;/b&gt;&lt;br&gt;Allocate MED-C01 through MED-C12 alongside asset-specific requirements. Common evidence needs a recorded applicability decision per configuration.&lt;br&gt;Traceability: cad-requirements-traceability.csv" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="limits" value="&lt;b&gt;Concept limitations&lt;/b&gt;&lt;br&gt;Dashboard speeds, percentages, coordinates and status are examples. Quantitative design and operating limits remain TBD. CAD labels do not establish patent clearance, environmental performance or medical/aviation approval." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="380" width="500" height="235" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="MOD-2" name="02 — High-level requirements 1–8">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="OpenTwin — Modular Medical Vessel Requirements&lt;br&gt;&lt;b&gt;02 — High-level requirements 1–8&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=18;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="20" width="1540" height="78" />
+        </mxCell>
+        <mxCell id="footer" value="PROPOSED CONCEPT BASELINE • CAD illustration is not validated geometry • I: inspection · A: analysis · D: demonstration · T: test • Clinical/physical acceptance evidence pending" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#64748b;fontFamily=Helvetica;fontSize=12;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="940" width="1540" height="42" />
+        </mxCell>
+        <mxCell id="MOD-01" value="&lt;b&gt;MOD-01 — Configurable vessel mission&lt;/b&gt;&lt;br&gt;SHALL define consultation, emergency support, laboratory, vaccination and telemedicine configurations with approved occupancy and crew roles.&lt;br&gt;&lt;br&gt;&lt;b&gt;I/D · Acceptance&lt;/b&gt;&lt;br&gt;Review configuration/CONOPS; demonstrate workflow and boarding for a selected configuration." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="MOD-02" value="&lt;b&gt;MOD-02 — Medical modules&lt;/b&gt;&lt;br&gt;SHALL define replaceable medical-module installation, retention, utility connections and servicing without conflicting access/egress.&lt;br&gt;&lt;br&gt;&lt;b&gt;A/I · Acceptance&lt;/b&gt;&lt;br&gt;Approve module load/CG and services; inspect installed arrangement and replacement access." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="MOD-03" value="&lt;b&gt;MOD-03 — Helipad interface&lt;/b&gt;&lt;br&gt;SHALL treat the illustrated helipad as a separately engineered medevac/logistics interface with aircraft loads, clearances and operating limits.&lt;br&gt;&lt;br&gt;&lt;b&gt;A/I · Acceptance&lt;/b&gt;&lt;br&gt;Approve aircraft/platform compatibility, structural/environment limits and authorized operating procedures before activation." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="MOD-04" value="&lt;b&gt;MOD-04 — Rescue/support boats&lt;/b&gt;&lt;br&gt;SHALL define stowage, handling, launching/recovery and safe patient-transfer interfaces for selected support boats.&lt;br&gt;&lt;br&gt;&lt;b&gt;A/D · Acceptance&lt;/b&gt;&lt;br&gt;Review handling/load/exclusion plan and demonstrate authorized recovery/transfer under defined conditions." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="MOD-05" value="&lt;b&gt;MOD-05 — Hybrid and solar option&lt;/b&gt;&lt;br&gt;SHALL define the selected hybrid propulsion/energy arrangement and roof PV without inferring a fuel chemistry from the illustration.&lt;br&gt;&lt;br&gt;&lt;b&gt;A/T · Acceptance&lt;/b&gt;&lt;br&gt;Approve drive/source selection and energy/thermal/load analysis; demonstrate source fault and essential-load response." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="MOD-06" value="&lt;b&gt;MOD-06 — Navigation and mission coordination&lt;/b&gt;&lt;br&gt;SHALL provide local navigation with selected GPS/GNSS, AIS and radar, plus reviewed AI assistance and mission status.&lt;br&gt;&lt;br&gt;&lt;b&gt;T · Acceptance&lt;/b&gt;&lt;br&gt;Replay sensor/AI loss and verify qualified review plus local helm and mission indications." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="MOD-07" value="&lt;b&gt;MOD-07 — Water and waste utilities&lt;/b&gt;&lt;br&gt;SHALL define fresh-water filtration and waste-treatment interfaces sized for selected clinical and accommodation loads.&lt;br&gt;&lt;br&gt;&lt;b&gt;A/I · Acceptance&lt;/b&gt;&lt;br&gt;Review independent fluid routes, approved quality/capacity criteria and service access." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="640" width="500" height="235" />
+        </mxCell>
+        <mxCell id="MOD-08" value="&lt;b&gt;MOD-08 — Remote healthcare and twin&lt;/b&gt;&lt;br&gt;SHALL support authorized telemedicine and operational twin analytics through distinct clinical and asset data paths.&lt;br&gt;&lt;br&gt;&lt;b&gt;T · Acceptance&lt;/b&gt;&lt;br&gt;Demonstrate remote session/link loss and asset telemetry without exposing patient data through fleet dashboards." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="640" width="500" height="235" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="MOD-3" name="03 — Logical architecture">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="OpenTwin — Modular Medical Vessel Requirements&lt;br&gt;&lt;b&gt;03 — Logical architecture&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=18;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="20" width="1540" height="78" />
+        </mxCell>
+        <mxCell id="footer" value="PROPOSED CONCEPT BASELINE • CAD illustration is not validated geometry • I: inspection · A: analysis · D: demonstration · T: test • Clinical/physical acceptance evidence pending" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#64748b;fontFamily=Helvetica;fontSize=12;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="940" width="1540" height="42" />
+        </mxCell>
+        <mxCell id="hull" value="&lt;b&gt;Naval platform&lt;/b&gt;&lt;br&gt;Hull/deck, compartmentation, loading, stability and mounts&lt;br&gt;&lt;br&gt;Allocation: MED-C01, MED-C02" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="propulsion" value="&lt;b&gt;Marine propulsion&lt;/b&gt;&lt;br&gt;Selected drive, steering, local stop and service access&lt;br&gt;&lt;br&gt;Allocation: Detailed allocation at asset baseline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="energy" value="&lt;b&gt;Energy and power&lt;/b&gt;&lt;br&gt;Selected sources, PV, protected distribution and reserves&lt;br&gt;&lt;br&gt;Allocation: MOD-05, MED-C04" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="medical" value="&lt;b&gt;Medical facilities / utilities&lt;/b&gt;&lt;br&gt;Configured equipment, patient access, hygiene, water/waste and essential services&lt;br&gt;&lt;br&gt;Allocation: MOD-02, MOD-07, MED-C03, MED-C05" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="control" value="&lt;b&gt;Local helm and authority&lt;/b&gt;&lt;br&gt;Navigation, operator state and clinical/dispatch responsibility boundaries&lt;br&gt;&lt;br&gt;Allocation: MOD-06, MED-C11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="mission" value="&lt;b&gt;Mission / transfer / logistics&lt;/b&gt;&lt;br&gt;Patient/cargo/boat interfaces; aviation interface only for MOD/SHIP&lt;br&gt;&lt;br&gt;Allocation: MOD-01, MOD-03, MOD-04" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="edge" value="&lt;b&gt;OpenTwin operational edge&lt;/b&gt;&lt;br&gt;Asset/configuration state, quality, buffering and maintenance; no unrestricted clinical payloads&lt;br&gt;&lt;br&gt;Allocation: MED-C09, MED-C10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="640" width="500" height="235" />
+        </mxCell>
+        <mxCell id="clinical" value="&lt;b&gt;Protected clinical integration&lt;/b&gt;&lt;br&gt;Authorized HIS/FHIR and selected imaging/telemedicine; clinical records/audit with separate access control&lt;br&gt;&lt;br&gt;Allocation: MOD-08, MED-C07, MED-C08" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="640" width="500" height="235" />
+        </mxCell>
+        <mxCell id="configuration" value="&lt;b&gt;Configuration and simulation&lt;/b&gt;&lt;br&gt;Module contracts, budgets, as-built, model versions and planned evidence&lt;br&gt;&lt;br&gt;Allocation: MED-C06, MED-C12" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="640" width="500" height="235" />
+        </mxCell>
+        <mxCell id="e0" value="mount" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64748b;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="hull" target="propulsion">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="power" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64748b;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.5;entryY=0;dashed=1;" edge="1" parent="1" source="energy" target="propulsion">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1320" y="108" />
+              <mxPoint x="800" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="roles" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64748b;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="medical" target="control">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="coord." style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64748b;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="control" target="mission">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e4" value="link" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64748b;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="edge" target="clinical">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="versions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64748b;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="clinical" target="configuration">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="MOD-4" name="04 — Interfaces and modes">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="OpenTwin — Modular Medical Vessel Requirements&lt;br&gt;&lt;b&gt;04 — Interfaces and modes&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=18;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="20" width="1540" height="78" />
+        </mxCell>
+        <mxCell id="footer" value="PROPOSED CONCEPT BASELINE • CAD illustration is not validated geometry • I: inspection · A: analysis · D: demonstration · T: test • Clinical/physical acceptance evidence pending" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#64748b;fontFamily=Helvetica;fontSize=12;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="940" width="1540" height="42" />
+        </mxCell>
+        <mxCell id="mech" value="&lt;b&gt;Mechanical / patient-transfer contract&lt;/b&gt;&lt;br&gt;Mounts, loads, mass/CG, retention, handling, access/egress and maintenance. For MOD/SHIP: separate aircraft and boat interface designs.&lt;br&gt;Capacity/geometry: TBD by asset and configuration." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="power" value="&lt;b&gt;Power / fluid contract&lt;/b&gt;&lt;br&gt;Selected bus ratings/connectors, isolation, reserve/essential loads, water/waste and HVAC interfaces.&lt;br&gt;Medical equipment integration requires its own verification and service/calibration records." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="data" value="&lt;b&gt;Clinical vs operational data&lt;/b&gt;&lt;br&gt;Operational: asset_id, configuration_id, mission_id, mode, location, energy, health/faults, timestamp, units, quality and source.&lt;br&gt;Clinical: authorized encounter/record links behind a dedicated access boundary." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="modes" value="&lt;b&gt;Baseline operating contexts&lt;/b&gt;&lt;br&gt;SAFE / ISOLATED&lt;br&gt;MANUAL NAVIGATION&lt;br&gt;DOCKED / MEDICAL SUPPORT&lt;br&gt;PATIENT TRANSFER&lt;br&gt;AUTHORIZED AVIATION / BOAT INTERFACE&lt;br&gt;DEGRADED / RECOVERY&lt;br&gt;MAINTENANCE&lt;br&gt;Clinical work and vessel modes are coordinated but not a single autonomous controller." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="guards" value="&lt;b&gt;Guards and fault responses&lt;/b&gt;&lt;br&gt;Approve tables for patient/equipment retention, personnel access, source isolation, stale data and local control. Transfers and handling require authorized entry conditions. Connectivity loss follows approved local/degraded workflows." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="requests" value="&lt;b&gt;Command / authority contract&lt;/b&gt;&lt;br&gt;Sender identity, role, mode, expected revision, expiration and acknowledgement. Reject unsafe or unauthorized requests. Document marine control, clinical decisions and dispatch authority independently." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="380" width="500" height="235" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="MOD-5" name="05 — Verification, budgets and release">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="OpenTwin — Modular Medical Vessel Requirements&lt;br&gt;&lt;b&gt;05 — Verification, budgets and release&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=18;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="20" width="1540" height="78" />
+        </mxCell>
+        <mxCell id="footer" value="PROPOSED CONCEPT BASELINE • CAD illustration is not validated geometry • I: inspection · A: analysis · D: demonstration · T: test • Clinical/physical acceptance evidence pending" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#64748b;fontFamily=Helvetica;fontSize=12;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="940" width="1540" height="42" />
+        </mxCell>
+        <mxCell id="navbudget" value="&lt;b&gt;Naval / handling budgets — TBD&lt;/b&gt;&lt;br&gt;Dimensions, draft/freeboard, mass/CG, payload/occupancy, stability, structural loads, speed/endurance, environmental and boarding/transfer limits.&lt;br&gt;Helipad/boat budgets apply only to selected MOD/SHIP interfaces." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="medbudget" value="&lt;b&gt;Medical / power / data budgets — TBD&lt;/b&gt;&lt;br&gt;Approved clinical scope, equipment, staff, utility quality/capacity, cold chain where selected, energy/reserve, timing/accuracy/staleness and recovery requirements." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="vv" value="&lt;b&gt;Verification sequence&lt;/b&gt;&lt;br&gt;Requirements and layout review → naval/utility analysis → model validation → bench/SIL/HIL fault cases → subsystem inspections → controlled vessel trials → supervised mission demonstration.&lt;br&gt;Clinical and aviation acceptance are separate workstreams." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="120" width="500" height="235" />
+        </mxCell>
+        <mxCell id="trace" value="&lt;b&gt;Traceability and evidence&lt;/b&gt;&lt;br&gt;Need → requirement → CAD callout/derived rationale → allocated design element → acceptance method → planned evidence ID → configuration.&lt;br&gt;CSV includes roles, criteria and evidence-pending status." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="gate" value="&lt;b&gt;Baseline exit&lt;/b&gt;&lt;br&gt;Approve CONOPS and responsibilities; assign people/dates; fix critical budgets and measurable acceptance limits; approve interfaces, hazards and fault/mode tables; establish test and evidence records." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="380" width="500" height="235" />
+        </mxCell>
+        <mxCell id="maturity" value="&lt;b&gt;Preserved references / maturity&lt;/b&gt;&lt;br&gt;D3Web.drawio remains a d3web/Drools class reference, not naval/clinical requirements evidence. Mermaid describes proposed architecture. No CAD image or illustrative dashboard proves acceptance." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;fontColor=#14263d;arcSize=10;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="380" width="500" height="235" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

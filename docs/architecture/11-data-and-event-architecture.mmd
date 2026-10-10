@@ -1,0 +1,9 @@
+flowchart TB
+    Sources["HIS, EHR, EMS, laboratory, ERP and IoT"] --> Gateway["Authenticated APIs and adapters"]
+    Gateway --> Services["Domain services and authorization"]
+    Services --> Events["Versioned event and workflow layer"]
+    Events --> Clinical["Protected clinical and FHIR records"]
+    Events --> Ops["Operational SQL, asset events and objects"]
+    Services --> Audit["Access and decision audit with provenance"]
+    Clinical -. "authorized minimized views" .-> Analytics["Governed analytics and AI"]
+    Ops --> Analytics
