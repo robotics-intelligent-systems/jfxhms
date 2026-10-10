@@ -1,0 +1,13 @@
+flowchart TB
+    Experience["Patient, clinician, EMS and administrator interfaces"] --> API["Identity-aware APIs and domain services"]
+    API --> Clinical["Clinical workflows and FHIR adapters"]
+    API --> Ops["Hospital, supply-chain and EMS operations"]
+    Clinical --> Records["Clinical records and clinical audit"]
+    Ops --> Core["OpenTwin registry, workflows and asset events"]
+    Core --> Assets["Asset state, history and operational audit"]
+    Physical["Facilities, devices and medical fleet"] --> Adapters["Validated telemetry and system adapters"]
+    Adapters --> Core
+    Core -. "reviewed operational requests" .-> Adapters
+    Records -. "authorized and minimized data" .-> Intelligence["CQL, AI and analytics with human review"]
+    Assets --> Intelligence
+    Governance["Privacy, safety, access control, provenance and resilience"] -. "applies to all boundaries" .-> API

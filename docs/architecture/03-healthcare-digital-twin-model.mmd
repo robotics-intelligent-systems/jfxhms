@@ -1,0 +1,8 @@
+flowchart LR
+    Asset["Physical or operational asset"] --> Sources["Sensors and HIS, EMS or ERP sources"]
+    Sources --> Adapter["Versioned twin adapter"]
+    Adapter --> Core["OpenTwin registry and state history"]
+    Core --> Rules["Rules, models and analytics"]
+    Rules --> Review["Qualified human review"]
+    Review -. "approved operational action" .-> Asset
+    Core --> Audit["Configuration, quality and provenance"]

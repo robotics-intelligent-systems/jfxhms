@@ -1,0 +1,8 @@
+flowchart TB
+    Patient["Patient"] --> Registration["Registration"]
+    Registration --> Triage["Qualified triage"]
+    Triage --> Encounter["Encounter and care coordination"]
+    Encounter --> Services["Selected clinical service"]
+    Services --> Diagnostics["Laboratory, imaging or pharmacy when indicated"]
+    Diagnostics --> Review["Clinician-reviewed results and care"]
+    Review --> Followup["Discharge, transfer or follow-up"]

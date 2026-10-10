@@ -1,0 +1,9 @@
+flowchart TB
+    Demand["Approved clinical and mission demand"] --> Stock["Inventory, reservations and FEFO assessment"]
+    Stock --> Plan["Procurement and distribution planning"]
+    Plan --> Supplier["Approved supplier"]
+    Supplier --> Receipt["Receipt, lot and expiry checks"]
+    Receipt --> Warehouse["Warehouse and cold chain when required"]
+    Warehouse --> Delivery["Hospital, vessel or EMS supply"]
+    Delivery --> Stock
+    Finance["Replaceable billing, financing and insurance adapters"] -. "authorized transactions" .-> Plan

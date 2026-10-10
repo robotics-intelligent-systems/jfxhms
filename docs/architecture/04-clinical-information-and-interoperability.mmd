@@ -1,0 +1,8 @@
+flowchart TB
+    App["Clinical application"] --> API["Authorized healthcare API"]
+    API --> Adapter["FHIR adapter: selected version and profiles"]
+    Adapter <--> Repo["Protected FHIR repository"]
+    Repo --> Rules["Terminology and versioned CQL rules"]
+    Rules --> Review["Qualified clinical review"]
+    Review --> Workflow["Clinical workflow and recorded decision"]
+    Workflow --> Adapter

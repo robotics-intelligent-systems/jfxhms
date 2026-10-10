@@ -1,0 +1,8 @@
+flowchart TB
+    Request["Emergency request"] --> Dispatch["Incident registration and qualified dispatch"]
+    Dispatch --> Selection["Resource and destination coordination"]
+    Selection --> Fleet["Road, marine or air-medical resource"]
+    Fleet --> Mission["Supervised response and transport"]
+    Mission --> Handover["Recorded hospital handover"]
+    Fleet -. "availability, location and status" .-> Dispatch
+    Handover --> History["Mission history and fleet readiness"]

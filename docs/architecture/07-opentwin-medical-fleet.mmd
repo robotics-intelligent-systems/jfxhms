@@ -1,0 +1,13 @@
+flowchart TB
+    Fleet["OpenTwin medical fleet"] --> Road["Road EMS: ambulances and mobile clinics"]
+    Fleet --> Marine["Marine medical assets"]
+    Fleet --> Air["Air-medical integration"]
+    Marine --> Patrol["Medical patrol boat: protected coastal and river mission"]
+    Marine --> Modular["Modular medical support vessel"]
+    Marine --> Ship["Large medical support ship"]
+    Road --> Mission["Mission twin: availability, crew, equipment and maintenance"]
+    Patrol --> Mission
+    Modular --> Mission
+    Ship --> Mission
+    Air --> Mission
+    Mission --> Platform["EMS and healthcare coordination"]
