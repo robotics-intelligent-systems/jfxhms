@@ -24,6 +24,10 @@ treated as one mandatory runtime stack.
 **Design principle:** open, modular architecture designed to minimize
 proprietary lock-in and enable independent implementations.
 
+## High-level technical specification and SysML
+
+[HMS-MBSE-001 specification](docs/requirements/high-level-technical-specification.md) integrates ten proposed platform requirements and the 36 existing CAD-aligned fleet requirements. [Combined traceability](docs/requirements/high-level-requirements-traceability.csv) and [12 editable SysML views](MBSE/CAS/Drawio/JFXHMS_High_Level_SysML.drawio) define candidate satisfaction allocations, planned verification, logical blocks, data boundaries, supervised modes and release gates. Evidence, quantitative budgets and deployment remain pending. Next proposed work package: HMS-PILOT-002, an offline synthetic encounter-to-mission-handover harness.
+
 ## CAD-aligned requirements baseline
 
 [Medical-fleet requirements and CAD traceability](docs/requirements/cad-concept-requirements.md) links the three illustrated marine concepts to four editable Drawio specifications: common requirements, medical patrol boat, modular medical vessel, and large medical support ship. Each proposed requirement has an ID, allocation, verification method and acceptance criterion. Dimensions, occupancy, power, operating envelopes and evidence remain pending; dashboard examples are not performance limits.

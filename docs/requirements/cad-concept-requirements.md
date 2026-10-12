@@ -38,3 +38,7 @@ The security boundary is consistent with [HL7's FHIR security guidance](https://
 ## Relationship to Mermaid
 
 The README's 14 Mermaid diagrams describe architecture/workflows; they are not verification evidence. [Editable sources and index](../architecture/README.md) mirror those blocks. The fleet architecture names the three CAD-backed vessel types and links their mission/asset state to EMS and healthcare coordination while preserving the clinical-data boundary.
+
+## Integrated platform specification
+
+[HMS-MBSE-001](high-level-technical-specification.md) adds ten platform requirements to this unchanged 36-requirement fleet baseline, with [combined traceability](high-level-requirements-traceability.csv) and [editable SysML views](../../MBSE/CAS/Drawio/JFXHMS_High_Level_SysML.drawio). The original fleet register remains authoritative for its IDs; the combined register reproduces those rows. Diagram satisfaction and verification links are proposed allocations and planned procedures, not acceptance results.
