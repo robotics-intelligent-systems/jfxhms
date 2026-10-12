@@ -22,3 +22,7 @@ These files mirror the 14 Mermaid blocks in the root README. They replace ASCII 
 Solid edges show primary data/workflow relationships; dotted edges show constrained feedback, evidence or governance relationships. Clinical stores and ordinary operational stores are distinct logical responsibilities even if a deployment shares infrastructure. Reviewed actions still pass through the responsible authorized workflow. Technology/adapters remain replaceable candidates.
 
 When changing a diagram, update both its `.mmd` and its README block, then parse and render it. Event-name examples, the API catalog and recommended directory tree remain reference text rather than being disguised as flowcharts. [CAD-aligned requirements](../requirements/cad-concept-requirements.md) define the separate proposed acceptance baseline.
+
+## Requirements and SysML
+
+[High-level technical specification](../requirements/high-level-technical-specification.md) adds system-level requirements, clinical/operational boundaries and release gates. [Native Drawio SysML views](../../MBSE/CAS/Drawio/JFXHMS_High_Level_SysML.drawio) complement the Mermaid workflow sources and detailed CAD-aligned fleet specifications.
