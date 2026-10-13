@@ -12,11 +12,11 @@ The baseline adds ten system requirements to the existing 36 medical-fleet requi
 
 | Concept and source | Selected design scope | Requirement allocation | Existing detailed specification |
 | --- | --- | --- | --- |
-| [Medical patrol boat](../../MBSE/CAD/medical-patrol-boat-concept.jpg) | Coastal/river hull, twin outboards, patient/stretcher area, modular deck, PV, local helm and separate water/waste | MED-C01–12 + PAT-01–07 | [Patrol boat](../../MBSE/CAS/Drawio/OpenTwin_Medical_Patrol_Boat_High_Level_Requirements.drawio) |
+| [Medical patrol boat](https://github.com/robotics-intelligent-systems/jfxai4cbs/blob/main/MBSE/CAD/medical-patrol-boat-concept.jpg) | Coastal/river hull, twin outboards, patient/stretcher area, modular deck, PV, local helm and separate water/waste | MED-C01–12 + PAT-01–07 | [Patrol boat](https://github.com/robotics-intelligent-systems/jfxai4cbs/blob/main/MBSE/CAS/Drawio/OpenTwin_Medical_Patrol_Boat_High_Level_Requirements.drawio) |
 | [Modular medical vessel](../../MBSE/CAD/modular-medical-vessel-concept.jpg) | Replaceable medical modules, selected hybrid/PV, utilities, navigation, separately engineered helipad and boat handling | MED-C01–12 + MOD-01–08 | [Modular vessel](../../MBSE/CAS/Drawio/OpenTwin_Modular_Medical_Vessel_High_Level_Requirements.drawio) |
 | [Large medical support ship](../../MBSE/CAD/large-medical-support-ship-concept.jpg) | Configured advanced-care modules, accommodation, command, cargo, energy variants, water/waste and independent aviation/boat interfaces | MED-C01–12 + SHIP-01–09 | [Support ship](../../MBSE/CAS/Drawio/OpenTwin_Large_Medical_Support_Ship_High_Level_Requirements.drawio) |
 
-The JPEGs are illustrations, not dimensioned engineering geometry. Retain the [source manifest](cad-source-baseline.json) and [CAD interpretation](cad-concept-requirements.md). The patrol boat has no depicted helipad, ICU or operating theatre. Optional advanced clinical services and aviation operations require separately approved configurations. No numerical geometry, speed, occupancy or clinical performance is inferred from the images. This task preserves all CAD source assets.
+The JPEGs are illustrations, not dimensioned engineering geometry. Retain the [source manifest](cad-source-baseline.json) and [CAD interpretation](cad-concept-requirements.md). The patrol boat has no depicted helipad, ICU or operating theatre. Optional advanced clinical services and aviation operations require separately approved configurations. No numerical geometry, speed, occupancy or clinical performance is inferred from the images. The retained vessel CAD assets are unchanged; the patrol illustration now resides in JFXAI4CBS.
 
 ## System requirements and proposed acceptance
 
@@ -129,3 +129,7 @@ Evidence records must include requirement/procedure IDs, configuration and softw
 HMS-PILOT-002: implement an offline synthetic encounter-to-mission-handover contract harness. Use fictional data and mocked clinical/asset adapters; exercise authorization denial, invalid profile, unreviewed assignment, stale telemetry, duplicate replay, WAN recovery and recorded handover. Produce reproducible results linked to HMS-002/003/004/006/007/008/009 and applicable MED-C07–11. This task is proposed, not executed by this documentation update.
 
 [Project overview](../../README.md) · [CAD-aligned requirements](cad-concept-requirements.md) · [Architecture sources](../architecture/README.md)
+
+### Concept ownership update — 13 October 2026
+
+The patrol-boat physical concept, PAT-01–07 specification and applicability copy of shared MED-C01–12 now reside in [JFXAI4CBS](https://github.com/robotics-intelligent-systems/jfxai4cbs/blob/main/docs/requirements/transferred-platform-concepts.md). JFXHMS retains two CAD illustrations and 39 locally owned requirements (10 HMS + 12 common + 8 MOD + 9 SHIP). The 46-row combined register retains seven externally owned PAT requirements for clinical/EMS interoperability; these are reference allocations, not local CAD ownership. Historical source manifests remain pinned and unchanged.

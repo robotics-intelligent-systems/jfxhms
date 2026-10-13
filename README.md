@@ -30,7 +30,7 @@ proprietary lock-in and enable independent implementations.
 
 ## CAD-aligned requirements baseline
 
-[Medical-fleet requirements and CAD traceability](docs/requirements/cad-concept-requirements.md) links the three illustrated marine concepts to four editable Drawio specifications: common requirements, medical patrol boat, modular medical vessel, and large medical support ship. Each proposed requirement has an ID, allocation, verification method and acceptance criterion. Dimensions, occupancy, power, operating envelopes and evidence remain pending; dashboard examples are not performance limits.
+[Medical-fleet requirements and CAD traceability](docs/requirements/cad-concept-requirements.md) links two local marine illustrations to common, modular-vessel and large-ship Drawio specifications, with an external link to the patrol-boat specification in JFXAI4CBS. Each proposed requirement has an ID, allocation, verification method and acceptance criterion. Dimensions, occupancy, power, operating envelopes and evidence remain pending; dashboard examples are not performance limits.
 
 The diagrams below describe a proposed architecture, not deployed services. Solid arrows indicate primary data or workflow relationships; dotted arrows indicate constrained feedback, supporting evidence or cross-cutting governance. Clinical records remain separately governed from ordinary asset telemetry.
 
@@ -207,7 +207,7 @@ flowchart TB
     Fleet["OpenTwin medical fleet"] --> Road["Road EMS: ambulances and mobile clinics"]
     Fleet --> Marine["Marine medical assets"]
     Fleet --> Air["Air-medical integration"]
-    Marine --> Patrol["Medical patrol boat: protected coastal and river mission"]
+    Marine --> Patrol["External JFXAI4CBS patrol boat: coastal and river mission"]
     Marine --> Modular["Modular medical support vessel"]
     Marine --> Ship["Large medical support ship"]
     Road --> Mission["Mission twin: availability, crew, equipment and maintenance"]
@@ -759,3 +759,7 @@ Reproducibility**
 > Use AI as governed decision support.\
 > Keep safety-critical authority under validated human and system
 > controls.
+
+### Concept ownership update — 13 October 2026
+
+The patrol-boat physical concept, PAT-01–07 specification and applicability copy of shared MED-C01–12 now reside in [JFXAI4CBS](https://github.com/robotics-intelligent-systems/jfxai4cbs/blob/main/docs/requirements/transferred-platform-concepts.md). JFXHMS retains two CAD illustrations and 39 locally owned requirements (10 HMS + 12 common + 8 MOD + 9 SHIP). The 46-row combined register retains seven externally owned PAT requirements for clinical/EMS interoperability; these are reference allocations, not local CAD ownership. Historical source manifests remain pinned and unchanged.

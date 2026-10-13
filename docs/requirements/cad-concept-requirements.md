@@ -1,13 +1,13 @@
 # CAD-aligned medical fleet requirements
 
-This proposed baseline connects the three marine JPEG concepts to high-level requirements, logical architecture, interfaces, operating contexts, verification criteria and planned evidence. The drawings are concept illustrations, not dimensioned production CAD or acceptance evidence. Clinical services, naval/aviation interfaces, energy sources and software integrations require separate configuration-specific engineering and approval.
+This proposed baseline connects the two retained marine JPEG concepts and the externally owned patrol-boat concept to high-level requirements, logical architecture, interfaces, operating contexts, verification criteria and planned evidence. The drawings are concept illustrations, not dimensioned production CAD or acceptance evidence. Clinical services, naval/aviation interfaces, energy sources and software integrations require separate configuration-specific engineering and approval.
 
 | CAD concept | Editable requirements diagram | Illustrated scope |
 | --- | --- | --- |
-| [Medical patrol boat](../../MBSE/CAD/medical-patrol-boat-concept.jpg) | [Patrol boat specification](../../MBSE/CAS/Drawio/OpenTwin_Medical_Patrol_Boat_High_Level_Requirements.drawio) | Coastal/river craft, twin outboards, patient/stretcher area, modular equipment/rescue/cargo deck, PV, navigation/communications and fresh/grey/black water. No depicted helipad, operating theatre or ICU. |
+| [Medical patrol boat](https://github.com/robotics-intelligent-systems/jfxai4cbs/blob/main/MBSE/CAD/medical-patrol-boat-concept.jpg) | [Patrol boat specification](https://github.com/robotics-intelligent-systems/jfxai4cbs/blob/main/MBSE/CAS/Drawio/OpenTwin_Medical_Patrol_Boat_High_Level_Requirements.drawio) | Coastal/river craft, twin outboards, patient/stretcher area, modular equipment/rescue/cargo deck, PV, navigation/communications and fresh/grey/black water. No depicted helipad, operating theatre or ICU. |
 | [Modular medical vessel](../../MBSE/CAD/modular-medical-vessel-concept.jpg) | [Modular vessel specification](../../MBSE/CAS/Drawio/OpenTwin_Modular_Medical_Vessel_High_Level_Requirements.drawio) | Configurable medical facilities, solar/hybrid energy, local navigation, helipad, rescue/support boat handling and utilities. |
 | [Large medical support ship](../../MBSE/CAD/large-medical-support-ship-concept.jpg) | [Large support ship specification](../../MBSE/CAS/Drawio/OpenTwin_Large_Medical_Support_Ship_High_Level_Requirements.drawio) | Candidate advanced-care modules, accommodation, logistics/cargo, bridge/command, helipad/support boats, energy alternatives, water/desalination/waste candidates and clinical exchange examples. |
-| All three concepts | [Common fleet requirements](../../MBSE/CAS/Drawio/OpenTwin_Medical_Fleet_Common_High_Level_Requirements.drawio) | Naval loading/structure, patient access, essential services, modular interfaces, protected clinical integration, asset telemetry, local authority, resilience and verification. |
+| Two local vessels + external patrol concept | [Common fleet requirements](../../MBSE/CAS/Drawio/OpenTwin_Medical_Fleet_Common_High_Level_Requirements.drawio) | Naval loading/structure, patient access, essential services, modular interfaces, protected clinical integration, asset telemetry, local authority, resilience and verification. |
 
 ## Allocation and acceptance
 
@@ -33,7 +33,7 @@ The security boundary is consistent with [HL7's FHIR security guidance](https://
 
 [MBSE/CAS/UML/D3Web.drawio](../../MBSE/CAS/UML/D3Web.drawio) contains d3web/Drools class sketches. It is unchanged and remains a research reference; it is not a predecessor naval requirements baseline. There were no corresponding technical-requirements diagrams to migrate in the inspected repository. The four new specifications therefore introduce requirement IDs without renaming existing class IDs or repurposing that file.
 
-[The CAD source manifest](cad-source-baseline.json) records the input commit, SHA-256 hashes, Git blob identities and pinned links. All three source JPEGs remain unchanged.
+[The CAD source manifest](cad-source-baseline.json) records the input commit, SHA-256 hashes, Git blob identities and pinned links. Historical source hashes are retained; the patrol-boat JPEG is now stored in JFXAI4CBS.
 
 ## Relationship to Mermaid
 
@@ -41,4 +41,8 @@ The README's 14 Mermaid diagrams describe architecture/workflows; they are not v
 
 ## Integrated platform specification
 
-[HMS-MBSE-001](high-level-technical-specification.md) adds ten platform requirements to this unchanged 36-requirement fleet baseline, with [combined traceability](high-level-requirements-traceability.csv) and [editable SysML views](../../MBSE/CAS/Drawio/JFXHMS_High_Level_SysML.drawio). The original fleet register remains authoritative for its IDs; the combined register reproduces those rows. Diagram satisfaction and verification links are proposed allocations and planned procedures, not acceptance results.
+[HMS-MBSE-001](high-level-technical-specification.md) adds ten platform requirements to the 29 locally owned fleet requirements and seven external patrol references, with [combined traceability](high-level-requirements-traceability.csv) and [editable SysML views](../../MBSE/CAS/Drawio/JFXHMS_High_Level_SysML.drawio). The original fleet register remains authoritative for its IDs; the combined register reproduces those rows. Diagram satisfaction and verification links are proposed allocations and planned procedures, not acceptance results.
+
+### Concept ownership update — 13 October 2026
+
+The patrol-boat physical concept, PAT-01–07 specification and applicability copy of shared MED-C01–12 now reside in [JFXAI4CBS](https://github.com/robotics-intelligent-systems/jfxai4cbs/blob/main/docs/requirements/transferred-platform-concepts.md). JFXHMS retains two CAD illustrations and 39 locally owned requirements (10 HMS + 12 common + 8 MOD + 9 SHIP). The 46-row combined register retains seven externally owned PAT requirements for clinical/EMS interoperability; these are reference allocations, not local CAD ownership. Historical source manifests remain pinned and unchanged.
